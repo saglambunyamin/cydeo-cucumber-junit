@@ -43,8 +43,8 @@ public class BrowserUtilities {
         wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 
-    public static void verifyTitleContains (String expectedInTitle) {
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
+    public static void verifyTitleContains (String expectedInUrl) {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInUrl));
     }
 
 
