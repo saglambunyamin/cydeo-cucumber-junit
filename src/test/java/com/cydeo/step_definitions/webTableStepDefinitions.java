@@ -40,4 +40,10 @@ public class webTableStepDefinitions {
         BrowserUtilities.verifyUrlContains("orders");
     }
 
+    @When("user enters username {string} password {string} and logins")
+    public void userEntersUsernamePasswordAndLogins(String username, String password) {
+
+        webTablePage.login(username, password);
+
+    }
 }
