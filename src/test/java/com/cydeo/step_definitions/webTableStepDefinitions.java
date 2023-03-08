@@ -37,7 +37,7 @@ public class webTableStepDefinitions {
 
     @Then("user should see url contains orders")
     public void user_should_see_url_contains_orders() {
-        BrowserUtilities.verifyTitleContains("orders");
+        BrowserUtilities.verifyUrlContains("orders");
     }
 
 }

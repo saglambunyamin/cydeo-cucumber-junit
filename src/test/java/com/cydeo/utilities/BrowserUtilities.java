@@ -43,7 +43,7 @@ public class BrowserUtilities {
         wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 
-    public static void verifyTitleContains (String expectedInUrl) {
+    public static void verifyUrlContains (String expectedInUrl) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInUrl));
     }
 
