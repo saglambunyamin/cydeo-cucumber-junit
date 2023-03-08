@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.Set;
 
 public class BrowserUtilities {
@@ -42,6 +41,10 @@ public class BrowserUtilities {
     public static void waitForInvisibilityOf (WebElement webElement ) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         wait.until(ExpectedConditions.invisibilityOf(webElement));
+    }
+
+    public static void verifyTitleContains (String expectedInTitle) {
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInTitle));
     }
 
 

@@ -27,11 +27,11 @@ Feature: Wikipedia search functionality and verifications
     Then User sees "<expectedMainHeader>>" is in the image header
 
     Examples: search values we are going to be using in this scenario is as below
-      | searchValue       | expectedTitle     | expectedMainHeader |
-      | Steve Jobs        | Steve Jobs        | Steve Jobs         |
-      | Cristiano Ronaldo | Cristiano Ronaldo | Cristiano Ronaldo  |
-      | Bob Marley        | Bob Marley        | Bob Marley         |
-      | Chuck Norris      | Chuck Norris      | Chuck Norris       |
+      | searchValue           | expectedTitle     | expectedMainHeader |
+      | Steve Jobs            | Steve Jobs        | Steve Jobs         |
+      | Cristiano Ronaldo  | Cristiano Ronaldo | Cristiano Ronaldo  |
+      | Bob Marley            | Bob Marley        | Bob Marley         |
+      | Chuck Norris          | Chuck Norris      | Chuck Norris       |
       | Marie Curie       | Marie Curie       | Marie Curie        |
       | Anthony Hopkins    | Anthony Hopkins    | Anthony Hopkins     |
       | Lady Gaga         | Lady Gaga         | Lady Gaga          |
