@@ -1,6 +1,6 @@
 package com.cydeo.step_definitions;
 
-import com.cydeo.pages.WebTablePage;
+import com.cydeo.pages.WebTableLoginPage;
 import com.cydeo.utilities.BrowserUtilities;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
@@ -8,13 +8,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
 
 import java.util.Map;
 
 public class webTableStepDefinitions {
 
-    WebTablePage webTablePage = new WebTablePage();
+    WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
 
     @Given("user is on the login page of web table app")
     public void user_is_on_the_login_page_of_web_table_app() {
@@ -24,17 +23,17 @@ public class webTableStepDefinitions {
 
     @When("user enters username {string}")
     public void userEntersUsername(String string) {
-        webTablePage.usernameBox.sendKeys(string);
+        webTableLoginPage.usernameBox.sendKeys(string);
     }
 
     @And("user enters password {string}")
     public void userEntersPassword(String string) {
-        webTablePage.passwordBox.sendKeys(string);
+        webTableLoginPage.passwordBox.sendKeys(string);
     }
 
     @When("user clicks to login button")
     public void user_clicks_to_login_button() {
-        webTablePage.loginButton.click();
+        webTableLoginPage.loginButton.click();
     }
 
     @Then("user should see url contains orders")
@@ -45,7 +44,7 @@ public class webTableStepDefinitions {
     @When("user enters username {string} password {string} and logins")
     public void userEntersUsernamePasswordAndLogins(String username, String password) {
 
-        webTablePage.login(username, password);
+        webTableLoginPage.login(username, password);
 
     }
 
@@ -56,7 +55,7 @@ public class webTableStepDefinitions {
         // webTablePage.passwordBox.sendKeys(credentials.get("password"));
         // webTablePage.loginButton.click();
 
-        webTablePage.login(credentials.get("username"), credentials.get("password"));
+        webTableLoginPage.login(credentials.get("username"), credentials.get("password"));
 
     }
 
